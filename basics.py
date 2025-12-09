@@ -9,6 +9,7 @@ def multiply(a,b):
 def main():
     assert is_even(10) is True
     assert is_even(7) is False
+    assert multiply(3,4) == 12
     print("My Name")
     print(1+2)
     print([1,2,3,4,5])
