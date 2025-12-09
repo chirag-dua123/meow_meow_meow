@@ -17,3 +17,11 @@ def wordcount(filename):
     for word, freq in sorted_counts[:10]:
         print(word, freq)
 
+def main():
+    try:
+        wordcount("input.txt")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    main()
