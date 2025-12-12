@@ -102,3 +102,9 @@ on **Python 3.11**.
 - `if __name__ == "__main__":` used consistently.
 
 ---
+
+##Commands
+
+python -m src.calculator
+python -m src.wordcount input.txt
+pytest
