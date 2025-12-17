@@ -13,6 +13,13 @@ def run_calculator(a, b, c):
         else:
             raise ValueError("Invalid operator")
         
+def check_float(a):
+    try:
+        if type(a) == float:
+            return True
+    except ValueError:
+        raise ValueError("Not a float")
+        
 def main():
     x = float(input("Enter first number: "))
     y = float(input("Enter second number: "))
