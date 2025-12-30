@@ -1,110 +1,109 @@
-# AI Engineering Project
+# AI Engineering — Course Materials
 
-A collection of Python scripts and utilities for learning and practicing AI engineering concepts.  
-This repository includes examples, a calculator CLI, word count utility, and test workflows.
+This repository contains course materials, examples, and exercises for a 12-week AI Engineering course covering Python, data, classical ML, deep learning, deployment, and product skills.
 
----
+## Course Overview
 
-## 📂 Project Structure
+The course is a practical, project-first introduction to the tools and workflows used to build AI systems. Students will work through weekly modules, short assignments, and two major projects (vision and NLP), finishing with an end-to-end product and interview prep.
 
-```
-.
-├── basics.py
-├── calculator.py
-├── wordcount.py
-├── requirements.txt
-├── pytest.ini
-├── tests/
-└── .github/workflows/pytest.yml
-```
+## Weekly Syllabus
 
----
+- **Week 1 — Foundations:** Python, Git, CLI, HTTP/REST, SQL basics.
+- **Week 2 — Data Wrangling:** Data cleaning, pandas, EDA, visualization, basic statistics.
+- **Week 3 — Classical ML:** Linear & logistic regression, tree models, scikit-learn pipelines.
+- **Week 4 — Model Quality:** Model evaluation, cross-validation, feature engineering, hyperparameter tuning.
+- **Week 5 — PyTorch Basics:** Tensors, autograd, training loop.
+- **Week 6 — Vision Project:** CNNs and transfer learning.
+- **Week 7 — NLP Project:** Transformers and fine-tuning with Hugging Face.
+- **Week 8 — MLOps Basics:** Docker, model serving with FastAPI, simple CI.
+- **Week 9 — Cloud Deployment:** Deploy a model to AWS/GCP/Azure with cost-aware setup.
+- **Week 10 — Data Engineering:** Intro to Spark and a simple batch pipeline.
+- **Week 11 — Product Integration:** Minimal frontend + API + monitoring; assemble end-to-end product.
+- **Week 12 — Capstone & Careers:** Interview prep, system design, portfolio polish, README and presentation.
 
-## ⚙️ Setup
+## Learning Outcomes
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/ai-engineering.git
-   cd ai-engineering
-   ```
+- Build reproducible data workflows using Python and pandas.
+- Train, evaluate, and tune classical and deep learning models.
+- Implement training loops with PyTorch and fine-tune transformer models.
+- Containerize and serve models with FastAPI and Docker.
+- Deploy models to cloud providers and reason about cost.
+- Integrate a minimal frontend with an API and add basic monitoring.
+- Prepare a professional README, presentation, and interview-ready portfolio.
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Repository Structure
 
-   - Core dependencies: `pytest`
-   - Optional (development): `black`, `ruff`
+Top-level folders you will use:
 
----
+- `src/` — course code, notebooks, and exercises.
+- `data/` — sample datasets used in exercises and projects.
+- `tests/` — unit tests and small CI examples.
+- `docs/` — additional reading and reference notes.
+- `docker/` — example Dockerfile(s) for serving and reproducible environments.
 
-## ▶️ Usage
+## Setup
 
-Run the scripts directly:
-
-```bash
-python basics.py
-python calculator.py
-python wordcount.py input.txt
-```
-
-Or use the module syntax:
+1. Clone the repository:
 
 ```bash
-python -m src.calculator
+git clone <repo-url>
+cd ai_engineer
 ```
 
----
-
-## 🧮 Calculator CLI
-
-The calculator supports basic operations.  
-Errors are raised as `Exception`s (not strings), so tests can assert on exceptions or values.
-
-Example:
+2. Create and activate a virtual environment, then install dependencies:
 
 ```bash
-python calculator.py 5 3 add
-```
-
----
-
-## 🧪 Testing
-
-Run all tests with:
-
-```bash
-pytest
-```
-
-Configuration is in `pytest.ini`.
-
----
-
-## 🔄 Continuous Integration
-
-GitHub Actions workflow is included at `.github/workflows/pytest.yml`.  
-It runs:
-
-```bash
+python -m venv .venv
+source .venv/Scripts/activate   # Windows: .venv\Scripts\Activate.ps1 or Activate.bat
 pip install -r requirements.txt
+```
+
+## Running Examples & Exercises
+
+- Run the calculator module:
+
+```bash
+python -m src.calculator
+```
+
+- Run the wordcount example on the provided `data/input.txt`:
+
+```bash
+python -m src.wordcount data/input.txt
+```
+
+## Tests
+
+Run unit tests with:
+
+```bash
 pytest
 ```
 
-on **Python 3.11**.
+CI is configured in `.github/workflows/pytest.yml`.
+
+## Projects & Assessments
+
+- Vision project (Week 6): image classification using transfer learning.
+- NLP project (Week 7): transformer fine-tuning and evaluation.
+- Capstone (Week 11–12): end-to-end product combining a minimal frontend, API, and monitoring; includes a README and short presentation.
+
+Assessment artifacts to submit:
+
+- Final project README (clear setup & run instructions).
+- Notebook or script reproducing training & evaluation.
+- Short slide deck or video walkthrough (5–10 minutes).
+
+## Contributing & Style
+
+- Follow PEP8; use `black` and `ruff` when available.
+- Write tests for non-trivial functions in `tests/`.
+- Use meaningful commit messages and feature branches.
+
+## Support & Contact
+
+If you have questions or find issues, open an issue in the repository or contact the course maintainer.
 
 ---
 
-## 🎨 Code Style
-
-- Consistent formatting enforced with `black` and `ruff`.
-- Each file includes module docstrings.
-- `if __name__ == "__main__":` used consistently.
-
----
-
-##Commands
-
-python -m src.calculator
-python -m src.wordcount input.txt
-pytest
+Updated core README with course syllabus and instructions.
