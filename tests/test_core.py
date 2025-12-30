@@ -1,4 +1,4 @@
-from src import basics, calculator
+from src.week_1.exercises import basics, calculator
 import pytest
 
 def test_multiply():

@@ -1,5 +1,5 @@
 import pytest
-from src.calculator import run_calculator
+from src.week_1.exercises.calculator import run_calculator
 
 def test_add():
     assert run_calculator(2, 3, '+') == 5
