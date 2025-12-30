@@ -1,9 +1,14 @@
 # Ignore Python cache files
 __pycache__/
 *.pyc
+.pytest_cache/
 
 # Ignore environment files
 .env
 
 # Ignore virtual environments (if used)
 venv/
+.venv/
+
+# Ignore IDE specific files
+.vscode/
