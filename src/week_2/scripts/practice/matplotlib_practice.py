@@ -62,10 +62,6 @@ print("Mean of Total:", df['total'].mean())
 print("Median of Total:", df['total'].median())
 print("Mode of Total:", df['total'].mode()[0])
 
-# Standard Deviation and Variance
-print("Standard Deviation of Total:", df['total'].std())
-print("Variance of Total:", df['total'].var())
-
 # Minimum and Maximum
 print("Minimum of Total:", df['total'].min())
 print("Maximum of Total:", df['total'].max())
@@ -110,3 +106,26 @@ plt.show()
 
 # Close the plot to free memory
 plt.close(fig)
+
+# Mean cs Median on Skewed Data
+skewed_data = np.random.exponential(scale=2, size=1000)
+mean_skewed = np.mean(skewed_data)
+median_skewed = np.median(skewed_data)
+print(f"Mean of skewed data: {mean_skewed}")
+print(f"Median of skewed data: {median_skewed}")
+print("Skewed data is right-skewed, so the mean is greater than the median.")
+
+# Standard Deviation and Variance
+print("Standard Deviation of Total:", df['total'].std())
+print("Variance of Total:", df['total'].var())
+
+print(df.columns.tolist())
+
+# Correlation
+correlation_matrix = df[['total', 'hp', 'attack', 'defense', 'sp._atk', 'sp._def', 'speed']].corr()
+print("Correlation matrix:\n", correlation_matrix)
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix of Pokemon Stats')
+plt.show()
+plt.close()
+
